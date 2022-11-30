@@ -1,15 +1,20 @@
 package com.crimereportsystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import java.util.Date;
 
 @Entity
 @Table(name = "crime_report")
 public class CrimeReport {
-    @Getter @Setter private string Reporter;
-    @Getter @Setter private string Description;
-    @Getter @Setter private Date Time;
-    @Getter @Setter private string Place;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter @Setter private Long id;
+
+    @Column @Getter @Setter private String Reporter;
+    @Column @Getter @Setter private String Description;
+    @Column @Getter @Setter private Date Time;
+    @Column @Getter @Setter private String Place;
 }

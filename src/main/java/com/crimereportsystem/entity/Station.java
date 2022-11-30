@@ -1,13 +1,16 @@
 package com.crimereportsystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "station")
 public class Station {
-    @Getter @Setter private string Address;
-    @Getter @Setter private string PhoneNumber;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter @Setter private Long id;
+
+    @Column @Getter @Setter private String Address;
+    @Column @Getter @Setter private String PhoneNumber;
 }

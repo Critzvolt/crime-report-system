@@ -1,16 +1,19 @@
 package com.crimereportsystem.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "user")
 public class User {
-    @Getter @Setter private string Name;
-    @Getter @Setter private string PhoneNumber;
-    @Getter @Setter private string Address;
-    @Getter @Setter private string Login;
-    @Getter @Setter private string Password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter @Setter private Long id;
+
+    @Column @Getter @Setter private String Name;
+    @Column @Getter @Setter private String PhoneNumber;
+    @Column @Getter @Setter private String Address;
+    @Column @Getter @Setter private String Login;
+    @Column @Getter @Setter private String Password;
 }
