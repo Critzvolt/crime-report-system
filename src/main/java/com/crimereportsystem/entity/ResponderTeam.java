@@ -11,7 +11,15 @@ public class ResponderTeam extends Admin {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter private Long id;
 
-    @Column @Getter @Setter private Station Station;
+    /*Station*/@Column @Getter @Setter private Long Station;
     @Column @Getter @Setter private String CurrentPlace;
-    @Column @Getter @Setter private CrimeReport CurrentJob;
+    /*CrimeReport*/@Column @Getter @Setter private Long CurrentJob;
+
+    public ResponderTeam(){}
+    public ResponderTeam(Long id, Long station, String currentPlace, Long currentJob) {
+        this.id = id;
+        this.Station = station;
+        this.CurrentPlace = currentPlace;
+        this.CurrentJob = currentJob;
+    }
 }

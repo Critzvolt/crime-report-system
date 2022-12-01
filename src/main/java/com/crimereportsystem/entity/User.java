@@ -6,14 +6,14 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "user")
-public class User {
+public abstract class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter @Setter private Long id;
+    @Getter @Setter protected Long id;
 
-    @Column @Getter @Setter private String Name;
-    @Column @Getter @Setter private String PhoneNumber;
-    @Column @Getter @Setter private String Address;
-    @Column @Getter @Setter private String Login;
-    @Column @Getter @Setter private String Password;
+    @Column @Getter @Setter protected String Name;
+    @Column @Getter @Setter protected String PhoneNumber;
+    @Column @Getter @Setter protected String Address;
+    @Column @Getter @Setter protected String Login;
+    @Column @Getter @Setter protected String Password;
 }

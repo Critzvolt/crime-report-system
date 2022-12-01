@@ -13,4 +13,12 @@ public class Station {
 
     @Column @Getter @Setter private String Address;
     @Column @Getter @Setter private String PhoneNumber;
+
+    public Station(){}
+    public Station(Long id, String address, String phoneNumber) {
+        super();
+        this.id = id;
+        this.Address = address;
+        this.PhoneNumber = phoneNumber;
+    }
 }

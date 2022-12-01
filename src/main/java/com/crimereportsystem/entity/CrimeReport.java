@@ -17,4 +17,13 @@ public class CrimeReport {
     @Column @Getter @Setter private String Description;
     @Column @Getter @Setter private Date Time;
     @Column @Getter @Setter private String Place;
+
+    public CrimeReport(){}
+    public CrimeReport(Long id, String reporter, String description, Date time, String place) {
+        this.id = id;
+        this.Reporter = reporter;
+        this.Description = description;
+        this.Time = time;
+        this.Place = place;
+    }
 }
