@@ -57,9 +57,10 @@ public class CrimeReportController {
         // get crimeReport from database by id
         CrimeReport existingCrimeReport = crimeReportService.getCrimeReportById(id);
         existingCrimeReport.setId(id);
-        existingCrimeReport.setFirstName(crimeReport.getFirstName());
-        existingCrimeReport.setLastName(crimeReport.getLastName());
-        existingCrimeReport.setEmail(crimeReport.getEmail());
+        existingCrimeReport.setReporter(crimeReport.getReporter());
+        existingCrimeReport.setDescription(crimeReport.getDescription());
+        existingCrimeReport.setTime(crimeReport.getTime());
+        existingCrimeReport.setPlace(crimeReport.getPlace());
 
         // save updated crimeReport object
         crimeReportService.updateCrimeReport(existingCrimeReport);
