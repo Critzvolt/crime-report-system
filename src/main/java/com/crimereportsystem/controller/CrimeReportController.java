@@ -26,7 +26,7 @@ public class CrimeReportController {
         model.addAttribute("crimeReports", crimeReportService.getAllCrimeReports());
         return "crimeReports";
     }
-
+/*
     @GetMapping("/crimeReports/new")
     public String createCrimeReportForm(Model model) {
 
@@ -73,6 +73,6 @@ public class CrimeReportController {
     public String deleteCrimeReport(@PathVariable Long id) {
         crimeReportService.deleteCrimeReportById(id);
         return "redirect:/crimeReports";
-    }
+    } */
 
 }
